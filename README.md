@@ -26,15 +26,15 @@ The dataset contains 37607 training images and 16132 validation images belonging
 ## Proposed Approach
 The AI pipeline developed by our team for this challenge is depicted in Figure 1.
 
-![AI pipeline](image.png)
+![image](https://github.com/user-attachments/assets/054fa371-61b9-4bcd-be4e-e69e2def1c03)
 <p align="center">Figure 1: AI Pipeline</p>
 
 The proposed model, CASCRNet, leverages the shared channel residual block concept depicted in Figure 2. An Atrous Spatial Pyramid Pooling block was incorporated to further enhance the model's ability to understand images. The LeakyReLU activation function with an alpha value of 0.01 was utilized. In addition to this, the Adam optimizer was used, whose learning rate started with a value of 0.001 and was halved each time it reached a plateau. Dilated convolutions were applied within the residual blocks. Additionally, focal loss was implemented to improve performance. The architecture of CASCRNet is illustrated in Figure 3.
 
-![SCR Block](image-1.png)
+![image](https://github.com/user-attachments/assets/f72c36a4-5356-43c9-b497-20c34f483b4e)
 <p align="center">Figure 2: Shared Channel Residual Block</p>
 
-![alt text](image-2.png)
+![image](https://github.com/user-attachments/assets/3ed5ee52-4759-424b-885b-0571479a6286)
 <p align="center">Figure 3: Architecture of the proposed CASCRNet</p>
 
 
@@ -44,14 +44,14 @@ A comparison of the performance metrics of the submitted models and baseline mod
 the validation dataset is provided in Table 1. The proposed model CASCRNet clearly outperforms all other
 models and baselines across every evaluation metric.
 
-![Comparision Table](image-3.png)
+![image-3](https://github.com/user-attachments/assets/48c3a6a3-ab4e-4987-8764-71ebebcb25d6)
 
 Figure 4 shows the performance of CASCRNet on the validation data in the form of ROC Curve and normalized confusion matrix. Remarkably, CASCRNet achieves
 these metrics while processing full-sized input images (224x224), even in the presence of a highly
 imbalanced training dataset. Despite its good performance, it is essential to note that the
 model is not intended as a replacement for a medical professional.
 
-![Metrics](image-4.png)
+![image-4](https://github.com/user-attachments/assets/adc78ce4-f9a2-4b02-84e3-7c63c797569d)
 <p align="center">Figure 4: Performance of CASCRNet on Validation Data</p>
 
 ## Conclusion and Future Scope
