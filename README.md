@@ -26,8 +26,10 @@ The dataset contains 37607 training images and 16132 validation images belonging
 ## Proposed Approach
 The AI pipeline developed by our team for this challenge is depicted in Figure 1.
 
-![image](https://github.com/user-attachments/assets/054fa371-61b9-4bcd-be4e-e69e2def1c03)
-<p align="center">Figure 1: AI Pipeline</p>
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/054fa371-61b9-4bcd-be4e-e69e2def1c03" alt="Figure 1: AI Pipeline"/>
+  <p><strong>Figure 1: AI Pipeline</strong></p>
+</div>
 
 The proposed model, CASCRNet, leverages the shared channel residual block concept depicted in Figure 2. An Atrous Spatial Pyramid Pooling block was incorporated to further enhance the model's ability to understand images. The LeakyReLU activation function with an alpha value of 0.01 was utilized. In addition to this, the Adam optimizer was used, whose learning rate started with a value of 0.001 and was halved each time it reached a plateau. Dilated convolutions were applied within the residual blocks. Additionally, focal loss was implemented to improve performance. The architecture of CASCRNet is illustrated in Figure 3.
 
