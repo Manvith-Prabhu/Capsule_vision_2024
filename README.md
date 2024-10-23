@@ -23,24 +23,45 @@ provides better disease classification results. The proposed model was successfu
 
 The dataset contains 37607 training images and 16132 validation images belonging to 10 classes each viz. Angioectasia, Bleeding, Erosion, Erythema, Foreign Body, Lymphangiectasia, Normal, Polyp, Ulcer and Worms. The testing set consists of 4385 images. The training and validation sets are highly imbalanced with Normal class forming the large chunk of the data.
 
-## Proposed Approach
-The AI pipeline developed by our team for this challenge is depicted in Figure 1.
+The training and validation datasets can be found [here](https://figshare.com/articles/dataset/Training_and_Validation_Dataset_of_Capsule_Vision_2024_Challenge/26403469?file=48018562).\
+The testing dataset can be found [here](https://figshare.com/articles/dataset/Testing_Dataset_of_Capsule_Vision_2024_Challenge/27200664?file=49717386).
 
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/054fa371-61b9-4bcd-be4e-e69e2def1c03" alt="Figure 1: AI Pipeline"/>
-  <p><strong>Figure 1: AI Pipeline</strong></p>
-</div>
+## Models used
+1) [ResNet50](https://keras.io/2.16/api/applications/resnet/)
+2) [DenseNet121](https://keras.io/2.16/api/applications/densenet/)
+3) [RCCGNet](https://github.com/shyamfec/RCCGNet)
+4) Proposed CASCRNet (this repository)
 
-The proposed model, CASCRNet, leverages the shared channel residual block concept depicted in Figure 2. An Atrous Spatial Pyramid Pooling block was incorporated to further enhance the model's ability to understand images. The LeakyReLU activation function with an alpha value of 0.01 was utilized. In addition to this, the Adam optimizer was used, whose learning rate started with a value of 0.001 and was halved each time it reached a plateau. Dilated convolutions were applied within the residual blocks. Additionally, focal loss was implemented to improve performance. The architecture of CASCRNet is illustrated in Figure 3.
+## Getting Started
 
+### Prerequisites
+Before starting, ensure you have:
+- Downloaded the datasets from the above links
+- A Kaggle account to run the notebooks OR
+- Google Colab to run the notebooks
+
+### Installation and Setup
+1. **Clone the repository:**
+```bash
+git clone https://github.com/Manvith-Prabhu/Capsule-Vision-2024.git
+```
+2. **Access the Capsule Vision 2024 dataset:** Upload the downloaded dataset to Kaggle or Colab
+
+### Running the Models: 
+1. **Open the notebooks on Kaggle or Google Colab:** Import the cloned notebooks into Kaggle or Google Colab to utilise their computational resources and pre-installed libraries.
+2. **Run the notebooks:** Follow the step-by-step instructions within each notebook to train and evaluate the models. The notebooks are self-contained and include comments to guide you through the process.
+
+
+## Proposed CASCRNet
+ Figure 1 shows the architecture of Shared Channel Residual Block
 <div align="center">
   <img src="https://github.com/user-attachments/assets/f72c36a4-5356-43c9-b497-20c34f483b4e" alt="Figure 2: Shared Channel Residual Block"/>
-  <p><strong>Figure 2: Shared Channel Residual Block</strong></p>
+  <p><strong>Figure 1: Shared Channel Residual Block</strong></p>
 </div>
-
+ Figure 2 shows the model architecture of CASCRNet which uses SCR blocks followed by ASPP blocks.
 <div align="center">
   <img src="https://github.com/user-attachments/assets/3ed5ee52-4759-424b-885b-0571479a6286" alt="Figure 3: Architecture of the proposed CASCRNet"/>
-  <p><strong>Figure 3: Architecture of the proposed CASCRNet</strong></p>
+  <p><strong>Figure 2: Architecture of the proposed CASCRNet</strong></p>
 </div>
 
 
@@ -54,20 +75,7 @@ models and baselines across every evaluation metric.
   <img src="https://github.com/user-attachments/assets/48c3a6a3-ab4e-4987-8764-71ebebcb25d6" alt="Figure 5: Your Caption Here"/>
 </div>
 
-
-Figure 4 shows the performance of CASCRNet on the validation data in the form of ROC Curve and normalized confusion matrix. Remarkably, CASCRNet achieves
-these metrics while processing full-sized input images (224x224), even in the presence of a highly
-imbalanced training dataset. Despite its good performance, it is essential to note that the
-model is not intended as a replacement for a medical professional.
-
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/adc78ce4-f9a2-4b02-84e3-7c63c797569d" alt="Figure 4: Performance of CASCRNet on Validation Data"/>
-  <p><strong>Figure 4: Performance of CASCRNet on Validation Data</strong></p>
-</div>
-
-## Conclusion and Future Scope
-
-The proposed model, being both compact and parameter-efficient, is well-suited for deployment on edge devices and mobile platforms, making it an ideal tool to assist doctors and medical personnel. Moreover, the model can be extended for real-time monitoring in
-video capsule endoscopy, offering valuable clinical support. While the CASCRNet outperformed others in the comparative study, there remains
-room for improvement. Exploring architectures like Vision Transformers (ViTs) and Vision-Language Models (VLMs) may lead to better-balanced accuracy. VLMs, in
-particular, could provide deeper insights and explain the rationale behind the model’s decisions, further enhancing its utility in medical applications.
+## Extra Files 
+- **Metrics Report**: Each folder contatins a metric report Json file corresponding to predictions of the model on validation set
+- **ROC Curve**: ROC curve for predictions of each model on validation set
+- **Validation and Test predictions**: XLSX file of predictions of each model on validation and test set respectively (Test predictions is provided only for the proposed model)
