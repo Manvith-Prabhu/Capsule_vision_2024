@@ -2,7 +2,7 @@
 
 ### Team Name: Code Cortex
 
-### Team Members: M Manvith Prabhu, K V Srinanda, Dr.Shyam Lal
+### Team Members: M Manvith Prabhu, K V Srinanda, Dr. Shyam Lal
 
 ### This repository houses the code and resources associated with our work on on the Capsule Vision Challenge 2024 by MISAHUB.
 
