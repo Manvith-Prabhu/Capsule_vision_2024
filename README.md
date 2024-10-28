@@ -43,7 +43,7 @@ Before starting, ensure you have:
 ### Installation and Setup
 1. **Clone the repository:**
 ```bash
-git clone https://github.com/Manvith-Prabhu/Capsule-Vision-2024.git
+git clone https://github.com/Manvith-Prabhu/CASCRNet.git
 ```
 2. **Access the Capsule Vision 2024 dataset:** Upload the downloaded dataset to Kaggle or Colab
 
@@ -75,7 +75,22 @@ models and baselines across every evaluation metric.
   <img src="https://github.com/user-attachments/assets/48c3a6a3-ab4e-4987-8764-71ebebcb25d6" alt="Figure 5: Your Caption Here"/>
 </div>
 
+
 ## Extra Files 
 - **Metrics Report**: Each folder contatins a metric report Json file corresponding to predictions of the model on validation set
 - **ROC Curve**: ROC curve for predictions of each model on validation set
 - **Validation and Test predictions**: XLSX file of predictions of each model on validation and test set respectively (Test predictions is provided only for the proposed model)
+
+## BibTex
+
+```
+@misc{srinanda2024cascrnetatrousspatialpyramid,
+      title={CASCRNet: An Atrous Spatial Pyramid Pooling and Shared Channel Residual based Network for Capsule Endoscopy}, 
+      author={K V Srinanda and M Manvith Prabhu and Shyam Lal},
+      year={2024},
+      eprint={2410.17863},
+      archivePrefix={arXiv},
+      primaryClass={eess.IV},
+      url={https://arxiv.org/abs/2410.17863}, 
+}
+```
