@@ -75,6 +75,8 @@ models and baselines across every evaluation metric.
   <img src="https://github.com/user-attachments/assets/48c3a6a3-ab4e-4987-8764-71ebebcb25d6" alt="Figure 5: Your Caption Here"/>
 </div>
 
+We were ranked #2 on validation set and #15 on test set performance.
+
 
 ## Extra Files 
 - **Metrics Report**: Each folder contatins a metric report Json file corresponding to predictions of the model on validation set
