@@ -13,7 +13,7 @@ doscopy (VCE) video frames. To address this multi-class disease classification t
 novel model that uses Shared channel residual (SCR) blocks and Atrous Spatial Pyramid
 Pooling (ASPP) blocks. Further, the performance of the proposed model is compared
 with other well-known approaches. The experimental results yield that proposed model
-provides better disease classification results. The proposed model was successful in classifying diseases with a F1 Score of 78.5% and a Mean AUC of 98.3% on the validation data, which is promising given its compact architecture. This approach was ranked 15 in the competition
+provides better disease classification results. The proposed model was successful in classifying diseases with a F1 Score of 78.5% and a Mean AUC of 98.3% on the validation data, which is promising given its compact architecture. This approach was ranked 15 in the competition.
 
 ## Technologies Used
 
